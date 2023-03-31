@@ -1,0 +1,29 @@
+#Brute force
+#Time complexity:O(N^2)
+#Code
+
+class Solution: 
+    number=0
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        number=nums[0]
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                if nums[i]+nums[j]==target:
+                    return i,j
+                    
+                    
+
+#Using Hashmap(Dictionaries)
+#Time complexity: O(N)
+
+class Solution:
+    number=0
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        number=nums[0]
+        dict_a={}
+        for index,value in enumerate(nums):
+            difference=target-value
+            if difference in dict_a:
+                return dict_a[difference],index
+            else:
+                dict_a[value]=index
