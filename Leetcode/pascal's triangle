@@ -1,0 +1,27 @@
+#pascal's triangle
+#leet code
+
+#Code-1
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        r = [[1]*(i+1) for i in range(numRows)]
+        for i in range(numRows):
+            for j in range(1, i):
+                r[i][j] = r[i-1][j-1] + r[i-1][j]
+        return r
+
+#TC: O(numRows^2)
+#SC: O(numRows^2)
+
+
+
+#Code-2
+def pascals(numRows):
+    r = [[1]*(i+1) for i in range(numRows)]
+    for i in range(numRows):
+        for j in range(1, i):
+            r[i][j] = r[i-1][j-1] + r[i-1][j]
+    return r
+numRows=int(input())
+print(pascals(numRows))
+
