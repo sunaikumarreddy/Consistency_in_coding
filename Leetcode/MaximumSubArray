@@ -32,3 +32,64 @@ N=list(map(int,input().split()))
 print(maxSubArray(N))
 
 
+if the given list is [2,-4,5-1,2,-3] then all possible contiguous sub arrays
+[2]
+[2,-4]
+[2,-4,5]
+[2,-4,5,-1]
+[2,-4,5,-1,2,-3]
+[-4]
+[-4,5]
+[-4,5,-1]
+[-4,5,-1,2]
+[-4,5,-1,2,-3]
+[5]
+[5,-1]
+[5,-1,2]
+[5,-1,2,-3]
+[-1]
+[-1,2]
+[-1,2,-3]
+[2]
+[2,-3]
+[-3]
+
+Above the contigous sub-lists,the contiguos sub-List is [5,-1,2] has a largest sum which is 6. 
+so the output would be 5 -1 6
+
+
+#code
+
+a = list(map(int, input().split()))
+sum_dict = {}
+for i in range(len(a)):
+    for j in range(i+1, len(a)+1):
+        sum_dict[tuple(a[i:j])] = sum(a[i:j])
+keys = list(sum_dict.keys()) 
+values = list(sum_dict.values())
+max_sum_index = values.index(max(values))  
+print(*keys[max_sum_index]) 
+
+#TC= O(N^2)
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
