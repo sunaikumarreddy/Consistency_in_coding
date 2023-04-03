@@ -1,4 +1,5 @@
 #Code
+#Time Complexity: O(n log n)
 
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
