@@ -1,0 +1,13 @@
+#Code
+#Time Complexity: O(N)
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        set_a=len(set(nums))
+        length_a=len(nums)
+        if(set_a==length_a):
+            return False
+        else:
+            return True
+            
+        
