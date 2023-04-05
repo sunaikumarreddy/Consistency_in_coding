@@ -1,0 +1,8 @@
+#Code
+
+class Solution:
+    def buildArray(self, nums: List[int]) -> List[int]:
+        list_a=[]
+        for i in range(len(nums)):
+            list_a+=[nums[nums[i]]]
+        return list_a
