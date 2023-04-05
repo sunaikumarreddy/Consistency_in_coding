@@ -1,0 +1,11 @@
+#Code
+
+class Solution:
+    def shuffle(self, nums: List[int], n: int) -> List[int]:
+        list_a=[]
+        x=nums[0:n]
+        y=nums[n:]
+        for i in range(n):
+            list_a.extend([x[i],y[i]])
+        return list_a
+        
