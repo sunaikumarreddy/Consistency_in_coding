@@ -1,0 +1,13 @@
+#Code
+
+class Solution:
+    def finalValueAfterOperations(self, operations: List[str]) -> int:
+        count_negative=0
+        for i in operations:
+            if "--X" in i:
+                count_negative-=1
+            elif "X--" in i:
+                count_negative-=1
+            else:
+                count_negative+=1
+        return count_negative
