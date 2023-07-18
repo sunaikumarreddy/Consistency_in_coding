@@ -45,3 +45,45 @@ recursion(1,N)
 
 TC:O(N)
 SC:O(N)
+
+
+# sum of the numbers till n 
+def recursion(i,sum_val):
+    if(i<1):
+        print(sum_val)
+        return 
+    recursion(i-1,sum_val+i)
+i=int(input())
+recursion(i,0)
+
+# sum of the numbers till n (functional recursion)
+def recursive_functional(n):
+    if n==0:
+        return 0
+    return n+recursive_functional(n-1)
+n=int(input())
+print(recursive_functional(n))
+
+
+#factorial of a given number
+def recursive_functional(n):
+    if(n==1):
+        return 1
+    return n*recursive_functional(n-1)
+n=int(input())
+print(recursive_functional(n))
+
+
+# sum of fibonacci numbers
+def fib(n):
+    if (n<=1):
+        return n
+    return fib(n-1)+fib(n-2)
+n=int(input())
+print(fib(n)) 
+
+
+
+
+
+
