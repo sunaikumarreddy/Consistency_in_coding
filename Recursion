@@ -83,7 +83,22 @@ n=int(input())
 print(fib(n)) 
 
 
+# printing all subsequences using recursion
 
+def subsequences(index_position,list_sub,list_a,length):
+    if (index_position>=length):
+        print(list_sub)
+        return 
+    list_sub.append(list_a[index_position])
+    subsequences(index_position+1,list_sub,list_a,length)
+    list_sub.pop()
+    subsequences(index_position+1,list_sub,list_a,length)
+
+list_a=list(map(int,input().split()))
+length=len(list_a)
+list_sub=[]
+index_position=0
+subsequences(index_position,list_sub,list_a,length)
 
 
 
